@@ -1,70 +1,113 @@
-# Getting Started with Create React App
+# Employee Service Request System
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A full-stack internal service request portal that allows employees to raise IT, HR, and Facility requests while enabling managers and administrators to assign requests, update statuses, monitor SLA deadlines, and review request activity.
 
-## Available Scripts
+## Project Overview
 
-In the project directory, you can run:
+The Employee Service Request System is designed to improve the way internal employee service requests are submitted, tracked, assigned, and resolved.
 
-### `npm start`
+The system provides:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Employee service request creation
+- Request tracking
+- Role-based access control
+- Manager request management
+- Request assignment
+- Request status updates
+- SLA deadline calculation
+- Overdue request identification
+- Request activity/audit history
+- Input validation and error handling
+- JWT-based authentication
+- Relational database storage
+- Production deployment
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Problem Statement
 
-### `npm test`
+Employees need a structured way to report internal IT, HR, and facility-related issues.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Without a centralized system, requests can be difficult to track, assign, prioritize, and monitor.
 
-### `npm run build`
+This project provides a centralized workflow where:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. Employees submit service requests.
+2. Requests receive a priority and SLA deadline.
+3. Managers review incoming requests.
+4. Managers assign requests to users.
+5. Request status is updated throughout the workflow.
+6. Activity history is recorded for traceability.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Objectives
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Provide a centralized service request portal.
+- Reduce manual request tracking.
+- Support role-based access.
+- Improve visibility of request status.
+- Track SLA deadlines.
+- Maintain an audit-friendly activity history.
+- Validate user input and handle invalid requests safely.
+- Provide a deployment-ready full-stack application.
 
-### `npm run eject`
+## User Roles
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Employee
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Employees can:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- Register and log in.
+- Create service requests.
+- Select request category.
+- Select request priority.
+- View their submitted requests.
+- Track request status.
+- View SLA information.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Manager
 
-## Learn More
+Managers can:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- Log in securely.
+- View service requests.
+- View employee request information.
+- Assign requests.
+- Update request status.
+- Add comments to status updates.
+- View request activity history.
+- Monitor SLA information.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Admin
 
-### Code Splitting
+The database and authorization model also support an administrator role for privileged system access.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Main Request Categories
 
-### Analyzing the Bundle Size
+The system supports:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- IT
+- HR
+- Facility
 
-### Making a Progressive Web App
+## Priority Levels and SLA
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+| Priority | SLA |
+|----------|-----|
+| Low | 48 hours |
+| Medium | 24 hours |
+| High | 8 hours |
+| Critical | 4 hours |
 
-### Advanced Configuration
+The SLA deadline is calculated when a request is created.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## Request Status Workflow
 
-### Deployment
+# text
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Open
+  ↓
+Assigned
+  ↓
+In Progress
+  ↓
+Resolved
+  ↓
+Closed
